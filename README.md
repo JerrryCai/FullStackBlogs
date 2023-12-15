@@ -1,6 +1,6 @@
 # Full Stack React Project container
 
-** Designed by Jared and implemented by Jared Cai and Yang Ge. **
+**Designed by Jared and implemented by Jared Cai and Yang Ge.**
 
 ## Overview
 
