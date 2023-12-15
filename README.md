@@ -1,8 +1,51 @@
-# React + Vite
+# Full Stack React Project container
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Designed by Jared Cai and implemented by Jared Cai and Yang Ge.**
 
-Currently, two official plugins are available:
+## Developers & Authors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Jared Cai, an accomplished Interaction Design Master's graduate from the University of Queensland, specializes in crafting user-centered design pages and developing intuitive user interfaces utilizing the React framework.
+
+Yang Ge, a skilled graduate with a Master's in Information Technology from the Royal Melbourne Institute of Technology, excels in developing robust back-end logic using Node.js.
+
+## Overview
+
+This project is built using Vite and React, and it serves as a full-stack React project container.
+
+## Description
+
+For this project, we wanna create a full-stack web app which shows our skills of building through React and NodeJS.
+
+## Getting Started
+
+Follow these steps to set up and run the project:
+
+1. Install project dependencies:
+
+```bash
+  npm install
+```
+
+2. Start server
+
+```bash
+  npm run dev
+```
+
+# Packages using in this project
+
+react
+
+react-dom
+
+tailwind css frameworks
+
+eslint -- for formatting rules
+
+react-router-dom
+
+react-icons
+
+prettier
+
+tailwind-css-prettier
