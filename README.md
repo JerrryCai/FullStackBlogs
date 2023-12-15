@@ -11,9 +11,11 @@ This project is built using Vite and React, and it serves as a full-stack React 
 Follow these steps to set up and run the project:
 
 1. Install project dependencies:
-   ```bash
-   npm install
-   ```
+
+```bash
+  npm install
+```
+
 2. Start server
 
 ```bash
