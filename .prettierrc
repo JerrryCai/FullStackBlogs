@@ -1,1 +1,3 @@
-{ "singleQuote": true, "operator-linebreak": ["error", "before"] }
+{
+  "singleQuote": true
+}

@@ -89,7 +89,9 @@ export default function Home() {
           <Link>
             <button
               className="
-          px-6 py-3 rounded-[0.625rem] border border-primary-100"
+          px-6 py-3 rounded-[0.625rem] border border-primary-100
+          text-primary-100
+          "
             >
               Subscribe
             </button>
@@ -108,7 +110,7 @@ export default function Home() {
            flex flex-col justify-between"
         >
           <div className={`transition-opacity duration-500 ${opacity}`}>
-            <h1 className="text-xl font-bold mb-1 text-text-100">
+            <h1 className="text-2xl font-bold mb-4 text-accent-100">
               {currentStory.title}
             </h1>
             <p className="text-base text-text-200">
