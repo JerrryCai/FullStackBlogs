@@ -11,6 +11,7 @@ export default function Home() {
     {
       title: 'Featured Story-1',
       description:
+        // eslint-disable-next-line max-len
         "This week's spotlight is on virtual reality. Join us as we explore VR's potential to change how we interact with the digital world.",
     },
     {
@@ -60,14 +61,17 @@ export default function Home() {
   const currentStory = featuredStoryArray[currentStoryIndex];
 
   return (
-    <div className="flex">
+    <div className="md:flex">
       <div
         className="
-      flex h-nav-screen
-      w-1/2 flex-col items-start justify-center pl-16 pr-20"
+        flex h-auto flex-col items-start  justify-center
+        py-12 pl-16 pr-20 md:h-nav-screen md:w-1/2 md:py-0"
       >
         <div className="mb-6">
-          <h1 className=" mb-6 text-[2.5rem] font-bold text-primary-100">
+          <h1
+            className="
+            mb-6 text-3xl font-bold text-primary-100 md:text-[2.5rem]"
+          >
             Exploring the Intersection of Technology and Creativity
           </h1>
           <p className="text-lg text-text-100">
@@ -82,7 +86,7 @@ export default function Home() {
             <button
               className="
               rounded-[0.625rem] border border-primary-100 bg-primary-100
-           px-6 py-3 text-white"
+              px-6 py-3 text-white"
             >
               Explore
             </button>
@@ -90,8 +94,8 @@ export default function Home() {
           <Link>
             <button
               className="
-          rounded-[0.625rem] border border-primary-100 px-6 py-3
-          text-primary-100
+              rounded-[0.625rem] border border-primary-100 px-6 py-3
+              text-primary-100
           "
             >
               Subscribe
@@ -99,19 +103,18 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="h-nav-screen w-1/2">
+      <div className="h-nav-screen md:w-1/2">
         <img
           src={imagePlaceholder}
           alt="image on home page"
           className="h-2/3 w-[100%] object-cover object-center"
         />
         <div
-          className="flex
-           h-1/3 flex-col
-           justify-between bg-bg-300 p-8"
+          className="flex h-1/3 flex-col
+          justify-between bg-bg-300 p-8"
         >
           <div className={`transition-opacity duration-500 ${opacity}`}>
-            <h1 className="mb-4 text-2xl font-bold text-accent-100">
+            <h1 className="mb-4 text-2xl font-bold text-primary-100">
               {currentStory.title}
             </h1>
             <p className="text-base text-text-200">
