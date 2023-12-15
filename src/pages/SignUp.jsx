@@ -35,7 +35,9 @@ export default function SignUp() {
     <div className="">
       <div className="md:flex">
         <div className="px-16 md:h-screen md:w-1/2">
-          <h1 className="mb-1 py-12 md:mb-32">LOGO</h1>
+          <h1 className="mb-1 py-12 md:mb-32">
+            <Link to="/">LOGO</Link>
+          </h1>
           <div className="text-center">
             <h1 className="mb-4 text-[3rem] font-bold text-primary-100">
               Sign Up
