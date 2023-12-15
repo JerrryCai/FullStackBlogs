@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const renderedNavItems = (
     <>
-      <li className="hover:text-accent-200 cursor-pointer">
+      <li className="cursor-pointer hover:text-accent-200">
         <NavLink
           to="/blogs"
           className={({ isActive }) => (isActive ? 'text-accent-200' : '')}
@@ -27,14 +27,14 @@ export default function Navbar() {
       </li>
       <li className="hover:text-accent-200">Create Post</li>
       <li className="hover:text-accent-200">About Us</li>
-      <li className="hover:text-accent-200 flex items-center gap-2">
+      <li className="flex items-center gap-2 hover:text-accent-200">
         Categories <FaAngleDown />
       </li>
     </>
   );
 
   return (
-    <div className="bg-primary-100 px-4 sm:px-16 py-4 sm:py-6">
+    <div className="bg-primary-100 px-4 py-4 sm:px-16 sm:py-6">
       <div className="flex items-center justify-between">
         <div>
           <Link to="/">LOGO</Link>
@@ -44,24 +44,24 @@ export default function Navbar() {
           <IoMdMenu size={35} className="text-accent-200" />
         </button>
         {/* 导航项 - 对于小屏幕是隐藏的，但可以通过点击汉堡菜单显示 */}
-        <div className="hidden sm:flex items-center gap-8">
+        <div className="hidden items-center gap-8 sm:flex">
           <ul
             className="
-          flex flex-col sm:flex-row items-center gap-8 text-text-main font-bold"
+          flex flex-col items-center gap-8 font-bold text-text-main sm:flex-row"
           >
             {renderedNavItems}
           </ul>
-          <div className="text-text-main flex gap-4">
+          <div className="flex gap-4 text-text-main">
             <button
-              className="border border-accent-200 hover:bg-accent-100
-            text-text-main font-bold py-2 px-4 rounded"
+              className="rounded border border-accent-200
+            px-4 py-2 font-bold text-text-main hover:bg-accent-100"
             >
               <Link to="/sign-up">Sign Up</Link>
             </button>
             <button
               className="
-            bg-accent-200 hover:bg-accent-100
-            text-white font-bold py-2 px-4 rounded"
+            rounded bg-accent-200 px-4 py-2
+            font-bold text-white hover:bg-accent-100"
             >
               Sign In
             </button>
@@ -73,20 +73,20 @@ export default function Navbar() {
         <div className="flex flex-col items-center sm:hidden">
           <ul
             className="
-          flex flex-col items-center gap-4 text-text-main font-bold"
+          flex flex-col items-center gap-4 font-bold text-text-main"
           >
             {renderedNavItems}
           </ul>
-          <div className="text-text-main flex items-center gap-4 mt-4">
+          <div className="mt-4 flex items-center gap-4 text-text-main">
             <button
-              className="border border-accent-200 hover:bg-accent-100
-            text-text-main font-bold py-2 px-4 rounded"
+              className="rounded border border-accent-200
+            px-4 py-2 font-bold text-text-main hover:bg-accent-100"
             >
               Sign Up
             </button>
             <button
-              className="bg-accent-200 hover:bg-accent-100
-            text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-accent-200
+            px-4 py-2 font-bold text-white hover:bg-accent-100"
             >
               Sign In
             </button>

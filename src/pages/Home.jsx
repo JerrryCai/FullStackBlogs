@@ -63,11 +63,11 @@ export default function Home() {
     <div className="flex">
       <div
         className="
-      pl-16 pr-20
-      h-nav-screen w-1/2 flex flex-col justify-center items-start"
+      flex h-nav-screen
+      w-1/2 flex-col items-start justify-center pl-16 pr-20"
       >
         <div className="mb-6">
-          <h1 className=" text-[2.5rem] text-primary-100 font-bold mb-6">
+          <h1 className=" mb-6 text-[2.5rem] font-bold text-primary-100">
             Exploring the Intersection of Technology and Creativity
           </h1>
           <p className="text-lg text-text-100">
@@ -80,8 +80,9 @@ export default function Home() {
         <div className="flex gap-4">
           <Link to="/blogs">
             <button
-              className=" px-6 py-3 border border-primary-100
-           bg-primary-100 rounded-[0.625rem] text-white"
+              className="
+              rounded-[0.625rem] border border-primary-100 bg-primary-100
+           px-6 py-3 text-white"
             >
               Explore
             </button>
@@ -89,7 +90,7 @@ export default function Home() {
           <Link>
             <button
               className="
-          px-6 py-3 rounded-[0.625rem] border border-primary-100
+          rounded-[0.625rem] border border-primary-100 px-6 py-3
           text-primary-100
           "
             >
@@ -98,19 +99,19 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="w-1/2 h-nav-screen">
+      <div className="h-nav-screen w-1/2">
         <img
           src={imagePlaceholder}
           alt="image on home page"
-          className="w-[100%] h-2/3 object-cover object-center"
+          className="h-2/3 w-[100%] object-cover object-center"
         />
         <div
-          className="p-8
-           bg-bg-300 h-1/3
-           flex flex-col justify-between"
+          className="flex
+           h-1/3 flex-col
+           justify-between bg-bg-300 p-8"
         >
           <div className={`transition-opacity duration-500 ${opacity}`}>
-            <h1 className="text-2xl font-bold mb-4 text-accent-100">
+            <h1 className="mb-4 text-2xl font-bold text-accent-100">
               {currentStory.title}
             </h1>
             <p className="text-base text-text-200">
