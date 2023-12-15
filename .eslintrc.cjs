@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'operator-linebreak': 'off',
     'object-curly-spacing': 'off',
     'indent': 'off',
   },

@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './pages/Home';
 
 /**
  * App component that displays the main content.
@@ -7,7 +8,7 @@ import React from 'react';
 export default function App() {
   return (
     <div>
-      <h1>Blogs goes here</h1>
+      <Home />
     </div>
   );
 }
