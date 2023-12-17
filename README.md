@@ -50,4 +50,3 @@ prettier
 
 tailwind-css-prettier
 
-prop-types
