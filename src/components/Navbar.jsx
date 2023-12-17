@@ -26,7 +26,14 @@ export default function Navbar() {
         </NavLink>
       </li>
       <li className="hover:text-accent-200">Create Post</li>
-      <li className="hover:text-accent-200">About Us</li>
+      <li className="hover:text-accent-200">
+        <NavLink
+          to="/about-us"
+          className={({ isActive }) => (isActive ? 'text-accent-200' : '')}
+        >
+          About Us
+        </NavLink>
+      </li>
       <li className="flex items-center gap-2 hover:text-accent-200">
         Categories <FaAngleDown />
       </li>
@@ -63,7 +70,7 @@ export default function Navbar() {
             rounded bg-accent-200 px-4 py-2
             font-bold text-white hover:bg-accent-100"
             >
-              Sign In
+              Log In
             </button>
           </div>
         </div>
