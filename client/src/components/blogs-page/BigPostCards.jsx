@@ -20,14 +20,14 @@ export default function BigPostCards({ blog }) {
       />
       <div className="md:my-6">
         <div className="mb-4">
-          <PostStatus category={blog?.category} readingTime={5} />
+          <PostStatus category={blog.category} readingTime={5} />
         </div>
         <h1 className="mb-2 text-2xl font-bold text-text-100 md:text-4xl">
-          {blog?.title}
+          {blog.title}
         </h1>
         <p className="mb-4 text-base text-text-200 md:m-0">{blog?.content}</p>
       </div>
-      <ReadMoreButton />
+      <ReadMoreButton id={blog.id} />
     </div>
   );
 }
