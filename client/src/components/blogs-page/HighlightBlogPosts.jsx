@@ -1,19 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BigPostCards from './BigPostCards';
 import SmallPostCards from './SmallPostCards';
 /**
  * The highlight blog posts which shows one big cards and several small cards
  * @return {React.Component}
  */
-export default function HighlightBlogPosts() {
+export default function HighlightBlogPosts({ blogs }) {
+  console.log(blogs);
   return (
     <div className="md:my-20">
-      <p className="text-2xl font-bold leading-[140%] text-accent-100 md:mb-10">
+      <p
+        className="
+            text-2xl font-bold leading-[140%] text-accent-100 md:mb-10"
+      >
         Featured blog posts
       </p>
       <div className="md:flex md:gap-8">
         <div className="md:w-1/2">
-          <BigPostCards />
+          <BigPostCards blog={blogs[0]} />
         </div>
         <div className="flex flex-col gap-8 md:w-1/2">
           {/* TODO: MAPPING FUNCTION, GET DATA FROM BACK-END */}
@@ -25,3 +30,7 @@ export default function HighlightBlogPosts() {
     </div>
   );
 }
+
+HighlightBlogPosts.propTypes = {
+  blogs: PropTypes.array.isRequired,
+};
