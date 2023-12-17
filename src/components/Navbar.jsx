@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa6';
 import { IoMdMenu } from 'react-icons/io';
 import { Link, NavLink } from 'react-router-dom';
+import logoImg from '../../public/logo-no-background.png';
 /**
  * Navbar Components that shows the navigation
  * @return { JSXElement }
@@ -44,7 +45,9 @@ export default function Navbar() {
     <div className="bg-primary-100 px-4 py-4 sm:px-16 sm:py-6">
       <div className="flex items-center justify-between">
         <div>
-          <Link to="/">LOGO</Link>
+          <Link to="/">
+            <img src={logoImg} alt="logo" className='h-10' />
+          </Link>
         </div>
         {/* 汉堡菜单按钮，只在小屏幕显示 */}
         <button className="sm:hidden" type="button" onClick={toggleMobileNav}>

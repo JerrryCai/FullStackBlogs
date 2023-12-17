@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import { Form, Link } from 'react-router-dom';
+import logoImg from '../../public/logo-no-background.png';
 /**
  * The sign up component
  * @return {React.component}
@@ -35,8 +36,10 @@ export default function SignUp() {
     <div className="">
       <div className="md:flex">
         <div className="px-16 md:h-screen md:w-1/2">
-          <h1 className="mb-1 py-12 md:mb-32">
-            <Link to="/">LOGO</Link>
+          <h1 className="mb-1 py-12 md:mb-20">
+            <Link to="/">
+              <img src={logoImg} alt="logo" className="h-20" />
+            </Link>
           </h1>
           <div className="text-center">
             <h1 className="mb-4 text-[3rem] font-bold text-primary-100">
