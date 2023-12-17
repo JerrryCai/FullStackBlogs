@@ -15,6 +15,9 @@ export default {
         'text-main': '#EEEEEE',
         'bg-300': '#d1d1d1',
       },
+      height: {
+        'nav-screen': 'calc(100vh - 90px)',
+      },
     },
   },
   plugins: [],

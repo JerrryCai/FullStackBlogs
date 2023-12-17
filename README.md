@@ -49,3 +49,4 @@ react-icons
 prettier
 
 tailwind-css-prettier
+
