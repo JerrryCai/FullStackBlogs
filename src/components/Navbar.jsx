@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa6';
 import { IoMdMenu } from 'react-icons/io';
 import { Link, NavLink } from 'react-router-dom';
-import logoImg from '../../public/logo-no-background.png';
+import logoImg from '/logo-no-background.png';
 /**
  * Navbar Components that shows the navigation
  * @return { JSXElement }

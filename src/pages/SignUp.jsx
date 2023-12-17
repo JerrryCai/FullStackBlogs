@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import { Form, Link } from 'react-router-dom';
-import logoImg from '../../public/logo-no-background.png';
+import logoImg from '/logo-no-background.png';
 /**
  * The sign up component
  * @return {React.component}
