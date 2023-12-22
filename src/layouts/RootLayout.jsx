@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../components/Navbar';
+import Navbar from '../components/Navbar';
 /**
  * The Layout Component
  * @return {JSXElement}
@@ -8,7 +8,7 @@ import Header from '../components/Navbar';
 export default function RootLayout() {
   return (
     <div>
-      <Header />
+      <Navbar />
       <Outlet />
     </div>
   );

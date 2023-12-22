@@ -7,21 +7,20 @@ import logoImg from '/logo-no-background.png';
  * @return {React.component}
  */
 export default function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [user, setUser] = useState({ email: '', password: '' });
   /**
    * handle email change
    * @param {*} event
    */
   function handleEmailChange(event) {
-    setEmail(event.target.value);
+    setUser((prevUser) => ({ ...prevUser, email: event.target.value }));
   }
   /**
    * handle password change
    * @param {*} event
    */
   function handlePasswordChange(event) {
-    setPassword(event.target.value);
+    setUser((prevUser) => ({ ...prevUser, password: event.target.value }));
   }
   /**
    * Handle sign up submit
@@ -29,7 +28,7 @@ export default function SignUp() {
    */
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(email, password);
+    console.log(user);
   }
 
   return (
@@ -62,6 +61,7 @@ export default function SignUp() {
                   h-12 w-[20rem] border
                   border-primary-200 p-3 placeholder:text-text-100
                   md:w-[30rem]"
+                  required
                 />
               </label>
               <label htmlFor="password">
@@ -74,6 +74,7 @@ export default function SignUp() {
                   h-12 w-[20rem] border
                    border-primary-200 p-3 placeholder:text-text-100
                   md:w-[30rem]"
+                  required
                 />
               </label>
               <button
