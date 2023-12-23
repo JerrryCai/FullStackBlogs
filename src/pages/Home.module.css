@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  height: var(--nav-screen);
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 64px;
+  padding-right: 80px;
+  width: 50%;
+}
+.text {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: auto;
+  font-weight: 700;
+  color: var(--primary-100);
+}
+.description {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-100);
+}
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+}
+.button {
+  border-width: 1px;
+  border-color: var(--primary-100);
+  border-radius: 10px;
+  padding: 12px 24px;
+}
+.buttonColor {
+  background-color: var(--primary-100);
+  color: var(--text-main);
+}
+.buttonUnColor {
+  color: var(--primary-100);
+}
+
+.rightContent {
+  width: 50%;
+}
+
+.img {
+  height: 65%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.storyContainer {
+  display: flex;
+  height: 35%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--text-main);
+  padding: 32px;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.storyTitle {
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: auto;
+  font-weight: 700;
+  color: var(--primary-100);
+}
+
+.storyDescription {
+  font-size: 16px;
+  line-height: auto;
+  color: var(--text-200);
+}
+
+.changeStoryButtonContainer {
+  margin-top: 48px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  color: var(--text-100);
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .leftContent {
+    height: auto;
+    padding: 48px 80px 48px 64px;
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .rightContent {
+    width: 100%;
+    height: auto;
+  }
+}

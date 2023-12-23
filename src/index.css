@@ -6,3 +6,17 @@
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue';
 }
+
+:root {
+  --nav-screen: calc(100vh - 90px);
+  --primary-100: #658864;
+  --primary-200: #b7b78a;
+  --primary-300: #fdf6fd;
+  --accent-100: #bc6c25;
+  --accent-200: #ecd79b;
+  --text-100: #292524;
+  --text-200: #78716c;
+  --bg-100: #dddddd;
+  --text-main: #eeeeee;
+  --bg-300: #d1d1d1;
+}

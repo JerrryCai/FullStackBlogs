@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Home.module.css';
 import { Link } from 'react-router-dom';
 import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import { CiCircleChevLeft, CiCircleChevRight } from 'react-icons/ci';
@@ -27,17 +28,17 @@ export default function Home() {
   ];
 
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
-  const [opacity, setOpacity] = useState('opacity-100');
+  const [storyClass, setStoryClass] = useState(styles.fadeIn);
 
   const changeStory = (index) => {
     // Start with fading out
-    setOpacity('opacity-0');
+    setStoryClass(styles.fadeOut);
 
     // After the transition duration, change the story and fade it in
     setTimeout(() => {
       setCurrentStoryIndex(index);
-      setOpacity('opacity-100');
-    }, 500); // This should match the transition duration
+      setStoryClass(styles.fadeIn);
+    }, 500); // Match the transition duration in CSS
   };
 
   const goToPreviousStory = () => {
@@ -61,67 +62,46 @@ export default function Home() {
   const currentStory = featuredStoryArray[currentStoryIndex];
 
   return (
-    <div className="md:flex">
-      <div
-        className="
-        flex h-auto flex-col items-start  justify-center
-        py-12 pl-16 pr-20 md:h-nav-screen md:w-1/2 md:py-0"
-      >
-        <div className="mb-6">
-          <h1
-            className="
-            mb-6 text-3xl font-bold text-primary-100 md:text-[2.5rem]"
-          >
+    <div className={styles.container}>
+      <div className={styles.leftContent}>
+        <div className={styles.text}>
+          <h1 className={styles.title}>
             Exploring the Intersection of Technology and Creativity
           </h1>
-          <p className="text-lg text-text-100">
+          <p className={styles.description}>
             Dive into our latest articles where we decode the latest tech
             trends, offer coding tutorials, and share insights into innovative
             design.
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className={styles.buttonGroup}>
           <Link to="/blogs">
-            <button
-              className="
-              rounded-[0.625rem] border border-primary-100 bg-primary-100
-              px-6 py-3 text-white"
-            >
+            <button className={`${styles.button} ${styles.buttonColor}`}>
               Explore
             </button>
           </Link>
           <Link>
-            <button
-              className="
-              rounded-[0.625rem] border border-primary-100 px-6 py-3
-              text-primary-100
-          "
-            >
+            <button className={`${styles.button} ${styles.buttonUnColor}`}>
               Subscribe
             </button>
           </Link>
         </div>
       </div>
-      <div className="h-nav-screen md:w-1/2">
+      <div className={styles.rightContent}>
         <img
           src={imagePlaceholder}
           alt="image on home page"
-          className="h-2/3 w-[100%] object-cover object-center"
+          className={styles.img}
         />
-        <div
-          className="flex h-1/3 flex-col
-          justify-between bg-bg-300 p-8"
-        >
-          <div className={`transition-opacity duration-500 ${opacity}`}>
-            <h1 className="mb-4 text-2xl font-bold text-primary-100">
-              {currentStory.title}
-            </h1>
-            <p className="text-base text-text-200">
+        <div className={styles.storyContainer}>
+          <div className={storyClass}>
+            <h1 className={styles.storyTitle}>{currentStory.title}</h1>
+            <p className={styles.storyDescription}>
               {currentStory.description}
             </p>
           </div>
-          <div className="mt-12 flex justify-end gap-4">
+          <div className={styles.changeStoryButtonContainer}>
             <button type="button">
               <CiCircleChevLeft size={50} onClick={goToPreviousStory} />
             </button>
