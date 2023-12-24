@@ -28,34 +28,34 @@ export default function Login() {
         <div className="flex items-center justify-center min-h-screen">
         <div className="px-16 md:h-screen">
             <h1 className="mb-1 py-12 md:mb-20">
-            <Link to="/">
-                <img src={logoImg} alt="logo" className="h-20" />
-            </Link>
+                <Link to="/">
+                    <img src={logoImg} alt="logo" className="h-20" />
+                </Link>
             </h1>
             <div className="text-center">
-            <h1 className="mb-4 text-[3rem] font-bold text-primary-100">
-                Log In
-            </h1>
-            <p className="mb-8 text-lg">
-                Lorem ipsum dolor sit amet adipiscing elit.
-            </p>
-            <Form
-                onSubmit={handleSubmit}
-                className="flex flex-col items-center justify-center gap-4"
-            >
-                <label htmlFor="email">
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Email"
-                    onChange={handleEmailChange}
-                    className="
-                    h-12 w-[20rem] border
-                    border-primary-200 p-3 placeholder:text-text-100
-                    md:w-[30rem]"
-                    required
-                />
-                </label>
+                <h1 className="mb-4 text-[3rem] font-bold text-primary-100">
+                    Log In
+                </h1>
+                <p className="mb-8 text-lg">
+                    Lorem ipsum dolor sit amet adipiscing elit.
+                </p>
+                <Form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col items-center justify-center gap-4"
+                >
+                    <label htmlFor="email">
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email"
+                            onChange={handleEmailChange}
+                            className="
+                            h-12 w-[20rem] border
+                            border-primary-200 p-3 placeholder:text-text-100
+                            md:w-[30rem]"
+                            required
+                        />
+                    </label>
                 <label htmlFor="password">
                 <input
                     type="password"
