@@ -93,7 +93,7 @@ export default function SignUp() {
               <p>
                 Already have an account?
                 <span className="ml-4">
-                  <Link to="/log-in" className="underline underline-offset-4">
+                  <Link to="/login" className="underline underline-offset-4">
                     Log In
                   </Link>
                 </span>

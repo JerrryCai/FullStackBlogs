@@ -73,7 +73,7 @@ export default function Navbar() {
             rounded bg-accent-200 px-4 py-2
             font-bold text-white hover:bg-accent-100"
             >
-              Log In
+              <Link to="/login">Log In</Link>
             </button>
           </div>
         </div>
