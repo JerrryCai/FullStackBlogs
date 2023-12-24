@@ -24,7 +24,6 @@ export default function Login() {
     }
 
     return (
-       
         <div className="flex items-center justify-center min-h-screen">
         <div className="px-16 md:h-screen">
             <h1 className="mb-1 py-12 md:mb-20">
@@ -94,6 +93,5 @@ export default function Login() {
             </div>
         </div>
         </div>
-        
       );
 }
