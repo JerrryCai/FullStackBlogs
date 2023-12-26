@@ -8,10 +8,89 @@
     padding: 48px 0;
     margin-bottom: 80px;
   }
+
+  .logo {
+    height: 80px;
+  }
+
+  .textContainer {
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-100);
+  }
+
+  .description {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .input {
+    height: 48px;
+    width: 480px;
+    border-width: 1px;
+    border-color: var(--primary-200);
+    padding: 12px;
+    color: var(--text-100)
+  }
+
+  .button {
+    height: 48px;
+    width: 480px;
+    padding: 12px;
+    background-color: var(--primary-200);
+  }
+
+  .cueWordContainer {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cueLine {
+    margin: 16px 0;
+    width: 480px;
+    border: 2px solid var(--primary-200);
+  }
+
+  .cueWord {
+    margin-left: 16px;
+  }
+
+  .signUpLink {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 }
 
 @media (max-width: 767px) {
   .logoContainer {
     margin-bottom: 4px;
+  }
+
+  .input {
+    width: 320px;
+  }
+
+  .button {
+    width: 320px;
+  }
+
+  .cueLine {
+    width: 480px;
   }
 }

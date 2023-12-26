@@ -30,17 +30,17 @@ export default function Login() {
     <div className={styles.container}>
       <div className={styles.logoContainer}>
         <Link to="/" className="">
-          <img src={logoImg} alt="logo" className="h-20" />
+          <img src={logoImg} alt="logo" className={styles.logo} />
         </Link>
       </div>
-      <div className="text-center">
-        <h1 className="mb-4 text-[3rem] font-bold text-primary-100">Log In</h1>
-        <p className="mb-8 text-lg">
+      <div className={styles.textContainer}>
+        <h1 className={styles.title}>Log In</h1>
+        <p className={styles.description}>
           Lorem ipsum dolor sit amet adipiscing elit.
         </p>
         <Form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center gap-4"
+          className={styles.form}
         >
           <label htmlFor="email">
             <input
@@ -48,11 +48,7 @@ export default function Login() {
               id="email"
               placeholder="Email"
               onChange={handleEmailChange}
-              className="
-                h-12 w-[20rem] border
-                border-primary-200 p-3 placeholder:text-text-100
-                md:w-[30rem]"
-              required
+              className={styles.input}
             />
           </label>
           <label htmlFor="password">
@@ -61,30 +57,23 @@ export default function Login() {
               id="password"
               placeholder="Password"
               onChange={handlePasswordChange}
-              className="
-                    h-12 w-[20rem] border
-                    border-primary-200 p-3 placeholder:text-text-100
-                    md:w-[30rem]"
+              className={styles.input}
               required
             />
           </label>
           <button
             type="submit"
-            className="h-12 w-[20rem]
-                bg-primary-200 p-3 md:w-[30rem]"
+            className={styles.button}
           >
             Log In
           </button>
         </Form>
-        <div className="mt-4 flex flex-col items-center">
-          <hr
-            className="my-4 w-[20rem] border-2
-                border-primary-200 md:w-[30rem]"
-          />
+        <div className={styles.cueWordContainer}>
+          <hr className={styles.cueLine}/>
           <p>
             Don't have an account?
-            <span className="ml-4">
-              <Link to="/sign-up" className="underline underline-offset-4">
+            <span className={styles.cueWord}>
+              <Link to="/sign-up" className={styles.signUpLink}>
                 Sign Up
               </Link>
             </span>
