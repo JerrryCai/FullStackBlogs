@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Navbar.module.css';
 import { FaAngleDown } from 'react-icons/fa6';
 import { IoMdMenu } from 'react-icons/io';
 import { Link, NavLink } from 'react-router-dom';
@@ -42,37 +43,29 @@ export default function Navbar() {
   );
 
   return (
-    <div className="bg-primary-100 px-4 py-4 sm:px-16 sm:py-6">
-      <div className="flex items-center justify-between">
+    <div className={styles.navbar}>
+      <div className={styles.container}>
         <div>
           <Link to="/">
-            <img src={logoImg} alt="logo" className='h-10' />
+            <img src={logoImg} alt="logo" className={styles.logo} />
           </Link>
         </div>
         {/* 汉堡菜单按钮，只在小屏幕显示 */}
-        <button className="sm:hidden" type="button" onClick={toggleMobileNav}>
-          <IoMdMenu size={35} className="text-accent-200" />
+        <button
+          className={styles.mobileNavContainer}
+          type="button"
+          onClick={toggleMobileNav}
+        >
+          <IoMdMenu size={35} className={styles.mobileNavIcon} />
         </button>
         {/* 导航项 - 对于小屏幕是隐藏的，但可以通过点击汉堡菜单显示 */}
-        <div className="hidden items-center gap-8 sm:flex">
-          <ul
-            className="
-          flex flex-col items-center gap-8 font-bold text-text-main sm:flex-row"
-          >
-            {renderedNavItems}
-          </ul>
-          <div className="flex gap-4 text-text-main">
-            <button
-              className="rounded border border-accent-200
-            px-4 py-2 font-bold text-text-main hover:bg-accent-100"
-            >
+        <div className={styles.navListContainer}>
+          <ul className={styles.navList}>{renderedNavItems}</ul>
+          <div className={styles.buttonContainer}>
+            <button className={`${styles.button} ${styles.buttonColored}`}>
               <Link to="/sign-up">Sign Up</Link>
             </button>
-            <button
-              className="
-            rounded bg-accent-200 px-4 py-2
-            font-bold text-white hover:bg-accent-100"
-            >
+            <button className={`${styles.button} ${styles.buttonUncolored}`}>
               Log In
             </button>
           </div>
