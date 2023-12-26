@@ -65,6 +65,7 @@ export default function Navbar() {
             <button className={`${styles.button} ${styles.buttonColored}`}>
               <Link to="/sign-up">Sign Up</Link>
             </button>
+
             <button className={`${styles.button} ${styles.buttonUncolored}`}>
               Log In
             </button>
