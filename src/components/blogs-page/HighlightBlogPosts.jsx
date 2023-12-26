@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './HighlightBlogPosts.module.css';
 import BigPostCards from './BigPostCards';
 import SmallPostCards from './SmallPostCards';
 /**
@@ -7,15 +8,13 @@ import SmallPostCards from './SmallPostCards';
  */
 export default function HighlightBlogPosts() {
   return (
-    <div className="md:my-20">
-      <p className="text-2xl font-bold leading-[140%] text-accent-100 md:mb-10">
-        Featured blog posts
-      </p>
-      <div className="md:flex md:gap-8">
-        <div className="md:w-1/2">
+    <div className={styles.container}>
+      <p className={styles.section}>Featured blog posts</p>
+      <div className={styles.content}>
+        <div className={styles.postContainer}>
           <BigPostCards />
         </div>
-        <div className="flex flex-col gap-8 md:w-1/2">
+        <div className={`${styles.smallPostContainer} ${styles.postContainer}`}>
           {/* TODO: MAPPING FUNCTION, GET DATA FROM BACK-END */}
           <SmallPostCards />
           <SmallPostCards />

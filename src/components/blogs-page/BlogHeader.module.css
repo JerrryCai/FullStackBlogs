@@ -1,0 +1,37 @@
+.container {
+  margin-bottom: 80px;
+}
+
+.section {
+  margin-bottom: 16px;
+  color: var(--accent-100);
+  font-size: 16px;
+  line-height: auto;
+}
+
+.title {
+  width: 50%;
+  font-size: 56px;
+  line-height: 120%;
+  margin-bottom: 24px;
+  color: var(--primary-100);
+}
+
+.description {
+  color: var(--text-200);
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-bottom: 30px;
+  }
+  .title {
+    width: 100%;
+    font-size: 24px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
