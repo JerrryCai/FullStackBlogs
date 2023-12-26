@@ -1,0 +1,47 @@
+.container {
+    width: 400px;
+    min-width: 400px;
+}
+
+.image {
+    height: 80px;
+    width: 80px;
+    border-radius: 9999px;
+    object-fit: cover;
+}
+
+.informationContainer {
+    margin: 24px 0;
+}
+
+.information {
+    margin-bottom: 16px;
+}
+
+.fullName {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--text100);
+}
+
+.jobTitle {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+@media (max-width: 767px) {
+    
+}
