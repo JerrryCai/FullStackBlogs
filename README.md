@@ -20,13 +20,21 @@ For this project, we wanna create a full-stack web app which shows our skills of
 
 Follow these steps to set up and run the project:
 
-1. Install project dependencies:
+### For the client
+
+1. enter client folder
+
+```bash
+  cd client
+```
+
+2. Install project dependencies:
 
 ```bash
   npm install
 ```
 
-2. Start server
+3. Start server
 
 ```bash
   npm run dev
@@ -48,7 +56,5 @@ react-icons
 
 prettier
 
-tailwind-css-prettier
 
-test
 
