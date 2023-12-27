@@ -1,0 +1,31 @@
+.container {
+    padding: 112px 64px;
+}
+
+.textContainer {
+    margin-bottom: 80px;
+}
+
+.title {
+    font-weight: 700;
+    color: var(--primary-100);
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 120%;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--text-100);
+}
+
+.cardContainer {
+    display: flex;
+    gap: 48px;
+    overflow-x: auto;
+}
+
+@media (max-width: 767px) {
+    
+}

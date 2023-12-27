@@ -1,0 +1,84 @@
+.container {
+    margin: 112px 64px;
+    
+}
+
+.subContainer {
+    gap: 80px;
+    display: flex;
+}
+
+.blogContainer {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.categoryContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-100);
+    margin-bottom: 40px;
+}
+
+.category {
+    color: var(--primary-100);
+}
+
+.blogTitle {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.fullName {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.blogInformationContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shareContainer {
+    margin-top: auto;
+    margin-bottom: 32px;
+}
+
+.shareText {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    border-radius: 9999px;
+    background-color: var(--text-main);
+    padding: 4px;
+}
+
+.imageContainer {
+    width: 50%;
+}
+
+.image {
+    height: 395px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    
+}

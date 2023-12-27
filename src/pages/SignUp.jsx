@@ -33,23 +33,23 @@ export default function SignUp() {
   }
 
   return (
-    <div className="md:flex">
-      <div className="px-16 md:h-screen md:w-1/2">
-        <h1 className="mb-1 py-12 md:mb-20">
+    <div className={styles.container}>
+      <div className={styles.mainContent}>
+        <div className={styles.logoContainer}>
           <Link to="/">
-            <img src={logoImg} alt="logo" className="h-20" />
+            <img src={logoImg} alt="logo" className={styles.logo} />
           </Link>
-        </h1>
-        <div className="text-center">
-          <h1 className="mb-4 text-[3rem] font-bold text-primary-100">
+        </div>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>
             Sign Up
           </h1>
-          <p className="mb-8 text-lg">
+          <p className={styles.description}>
             Lorem ipsum dolor sit amet adipiscing elit.
           </p>
           <Form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center justify-center gap-4"
+            className={styles.form}
           >
             <label htmlFor="email">
               <input
@@ -57,10 +57,7 @@ export default function SignUp() {
                 id="email"
                 placeholder="Email"
                 onChange={handleEmailChange}
-                className="
-                h-12 w-[20rem] border
-                border-primary-200 p-3 placeholder:text-text-100
-                md:w-[30rem]"
+                className={styles.input}
                 required
               />
             </label>
@@ -70,30 +67,23 @@ export default function SignUp() {
                 id="password"
                 placeholder="Password"
                 onChange={handlePasswordChange}
-                className="
-                h-12 w-[20rem] border
-                  border-primary-200 p-3 placeholder:text-text-100
-                md:w-[30rem]"
+                className={styles.input}
                 required
               />
             </label>
             <button
               type="submit"
-              className="h-12 w-[20rem]
-              bg-primary-200 p-3 md:w-[30rem]"
+              className={styles.button}
             >
               Sign Up
             </button>
           </Form>
-          <div className="mt-4 flex flex-col items-center">
-            <hr
-              className="my-4 w-[20rem] border-2
-              border-primary-200 md:w-[30rem]"
-            />
+          <div className={styles.cueWordContainer}>
+            <hr className={styles.cueLine}/>
             <p>
               Already have an account?
-              <span className="ml-4">
-                <Link to="/login" className="underline underline-offset-4">
+              <span className={styles.cueWord}>
+                <Link to="/login" className={styles.loginLink}>
                   Log In
                 </Link>
               </span>
@@ -101,7 +91,7 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      <div className="mt-5 bg-slate-300 md:mt-0 md:h-screen md:w-1/2">
+      <div className={styles.image}>
         <img
           src={imagePlaceholder}
           alt="sign up image"
