@@ -1,28 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Link } from 'react-router-dom';
-import styles from "./SignUp.module.css";
+import styles from './SignUp.module.css';
 import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import logoImg from '/logo-no-background.png';
+import AuthFormInput from '../components/AuthFormInput';
+import { useFormInput } from '../hooks/useFormInput';
+import AuthFormButton from '../components/AuthFormButton';
 /**
  * The sign up component
  * @return {React.component}
  */
 export default function SignUp() {
-  const [user, setUser] = useState({ email: '', password: '' });
-  /**
-   * handle email change
-   * @param {*} event
-   */
-  function handleEmailChange(event) {
-    setUser((prevUser) => ({ ...prevUser, email: event.target.value }));
-  }
-  /**
-   * handle password change
-   * @param {*} event
-   */
-  function handlePasswordChange(event) {
-    setUser((prevUser) => ({ ...prevUser, password: event.target.value }));
-  }
+  const [user, handleChange] = useFormInput({
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+  });
+
   /**
    * Handle sign up submit
    * @param {*} event
@@ -41,45 +36,29 @@ export default function SignUp() {
           </Link>
         </div>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>
-            Sign Up
-          </h1>
+          <h1 className={styles.title}>Sign Up</h1>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet adipiscing elit.
           </p>
-          <Form
-            onSubmit={handleSubmit}
-            className={styles.form}
-          >
-            <label htmlFor="email">
-              <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                onChange={handleEmailChange}
-                className={styles.input}
-                required
-              />
-            </label>
-            <label htmlFor="password">
-              <input
-                type="password"
-                id="password"
-                placeholder="Password"
-                onChange={handlePasswordChange}
-                className={styles.input}
-                required
-              />
-            </label>
-            <button
-              type="submit"
-              className={styles.button}
-            >
-              Sign Up
-            </button>
+          <Form onSubmit={handleSubmit} className={styles.form}>
+            <AuthFormInput type="email" onChange={handleChange} />
+            <AuthFormInput
+              type="text"
+              name="firstName"
+              labelText="first name"
+              onChange={handleChange}
+            />
+            <AuthFormInput
+              type="text"
+              name="lastName"
+              labelText="last name"
+              onChange={handleChange}
+            />
+            <AuthFormInput type="password" onChange={handleChange} />
+            <AuthFormButton>sign up</AuthFormButton>
           </Form>
           <div className={styles.cueWordContainer}>
-            <hr className={styles.cueLine}/>
+            <hr className={styles.cueLine} />
             <p>
               Already have an account?
               <span className={styles.cueWord}>

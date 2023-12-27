@@ -1,31 +1,46 @@
 .container {
-    padding: 112px 64px;
+  padding: 112px 64px;
 }
 
 .textContainer {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .title {
-    font-weight: 700;
-    color: var(--primary-100);
-    margin-bottom: 24px;
-    font-size: 48px;
-    line-height: 120%;
+  font-weight: 700;
+  color: var(--primary-100);
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 120%;
 }
 
 .description {
-    font-size: 18px;
-    line-height: 28px;
-    color: var(--text-100);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-100);
 }
 
 .cardContainer {
-    display: flex;
-    gap: 48px;
-    overflow-x: auto;
+  display: flex;
+  gap: 48px;
+  overflow-x: auto;
 }
 
 @media (max-width: 767px) {
-    
+  .container {
+    padding: 56px 32px;
+  }
+
+  .textContainer {
+    margin-bottom: 32px;
+  }
+
+  .cardContainer {
+    display: block;
+    overflow-x: none;
+  }
+
+  .cardContainer > * {
+    margin-bottom: 32px;
+  }
 }

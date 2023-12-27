@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLinkedin } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import imagePlaceholder from '../../assets/images/Image-Placeholder.png';
-import styles from "./Author.module.css"
+import styles from './Author.module.css';
 /**
  * The author component in about us page
  * @return {React.Component}
@@ -10,11 +10,7 @@ import styles from "./Author.module.css"
 export default function Author() {
   return (
     <div className={styles.container}>
-      <img
-        src={imagePlaceholder}
-        alt="avatar"
-        className={styles.image}
-      />
+      <img src={imagePlaceholder} alt="avatar" className={styles.image} />
       <div className={styles.informationContainer}>
         <div className={styles.information}>
           <p className={styles.fullName}>FULL NAME</p>

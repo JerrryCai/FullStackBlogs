@@ -42,6 +42,17 @@ export default function Navbar() {
     </>
   );
 
+  const renderedButtons = (
+    <>
+      <button className={`${styles.button} ${styles.buttonColored}`}>
+        Sign Up
+      </button>
+      <button className={`${styles.button} ${styles.buttonUncolored}`}>
+        Sign In
+      </button>
+    </>
+  );
+
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
@@ -61,29 +72,14 @@ export default function Navbar() {
         {/* 导航项 - 对于小屏幕是隐藏的，但可以通过点击汉堡菜单显示 */}
         <div className={styles.navListContainer}>
           <ul className={styles.navList}>{renderedNavItems}</ul>
-          <div className={styles.buttonContainer}>
-            <button className={`${styles.button} ${styles.buttonColored}`}>
-              <Link to="/sign-up">Sign Up</Link>
-            </button>
-
-            <button className={`${styles.button} ${styles.buttonUncolored}`}>
-              Log In
-            </button>
-          </div>
+          <div className={styles.buttonContainer}>{renderedButtons}</div>
         </div>
       </div>
       {/* Mobile Navbar */}
       {showMobileNav && (
         <div className={styles.mobileNavContainer}>
           <ul className={styles.navList}>{renderedNavItems}</ul>
-          <div className={styles.mobileButtonContainer}>
-            <button className={`${styles.button} ${styles.buttonColored}`}>
-              Sign Up
-            </button>
-            <button className={`${styles.button} ${styles.buttonUncolored}`}>
-              Sign In
-            </button>
-          </div>
+          <div className={styles.mobileButtonContainer}>{renderedButtons}</div>
         </div>
       )}
     </div>

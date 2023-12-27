@@ -1,80 +1,62 @@
-@media (min-width: 768px) {
-  .container {
-    min-height: 100vh;
-    padding: 0 64px;
-  }
+.container {
+  min-height: 100vh;
+  padding: 0 64px;
+}
 
-  .logoContainer {
-    padding: 48px 0;
-    margin-bottom: 80px;
-  }
+.logoContainer {
+  padding: 48px 0;
+  margin-bottom: 80px;
+}
 
-  .logo {
-    height: 80px;
-  }
+.logo {
+  height: 80px;
+}
 
-  .textContainer {
-    text-align: center;
-  }
+.textContainer {
+  text-align: center;
+}
 
-  .title {
-    margin-bottom: 16px;
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--primary-100);
-  }
+.title {
+  margin-bottom: 16px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-100);
+}
 
-  .description {
-    margin-bottom: 32px;
-    font-size: 18px;
-    line-height: 28px;
-  }
+.description {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 28px;
+}
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
 
-  .input {
-    height: 48px;
-    width: 480px;
-    border-width: 1px;
-    border-color: var(--primary-200);
-    padding: 12px;
-    color: var(--text-100)
-  }
+.cueWordContainer {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .button {
-    height: 48px;
-    width: 480px;
-    padding: 12px;
-    background-color: var(--primary-200);
-  }
+.cueLine {
+  margin: 16px 0;
+  width: 480px;
+  border: 2px solid var(--primary-200);
+}
 
-  .cueWordContainer {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.cueWord {
+  margin-left: 16px;
+}
 
-  .cueLine {
-    margin: 16px 0;
-    width: 480px;
-    border: 2px solid var(--primary-200);
-  }
-
-  .cueWord {
-    margin-left: 16px;
-  }
-
-  .signUpLink {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.signUpLink {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 767px) {
@@ -91,6 +73,6 @@
   }
 
   .cueLine {
-    width: 480px;
+    width: 320px;
   }
 }
