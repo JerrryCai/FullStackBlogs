@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './BigPostCards.module.css';
 
 import imagePlaceholder from '../../assets/images/Image-Placeholder.png';
 import PostStatus from './PostStatus';
@@ -12,17 +13,15 @@ export default function BigPostCards() {
     <div>
       <img
         src={imagePlaceholder}
-        alt=""
-        className="w-full object-cover md:h-[25rem]"
+        alt="image placeholder"
+        className={styles.image}
       />
       <div className="md:my-6">
         <div className="mb-4">
           <PostStatus category="CATEGORY" readingTime={5} />
         </div>
-        <h1 className="mb-2 text-2xl font-bold text-text-100 md:text-4xl">
-          BLOG TITLE HEADING WILL GO HERE
-        </h1>
-        <p className="mb-4 text-base text-text-200 md:m-0">
+        <h1 className={styles.title}>BLOG TITLE HEADING WILL GO HERE</h1>
+        <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros.
         </p>

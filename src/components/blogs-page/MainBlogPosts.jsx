@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MainBlogPosts.module.css';
 import MainPostCards from './MainPostCards';
 /**
  *
@@ -7,10 +8,8 @@ import MainPostCards from './MainPostCards';
 export default function MainBlogPosts() {
   return (
     <div>
-      <p className="text-2xl font-bold leading-[140%] text-accent-100 md:mb-10">
-        Featured blog posts
-      </p>
-      <div className="grid-cols-3 gap-8 md:grid">
+      <p className={styles.cueWords}>Featured blog posts</p>
+      <div className={styles.postContainer}>
         <MainPostCards />
         <MainPostCards />
 

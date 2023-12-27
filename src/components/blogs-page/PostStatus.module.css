@@ -1,0 +1,24 @@
+.container {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.category {
+  background-color: var(--accent-200);
+  padding: 4px 8px;
+  color: var(--text-100);
+}
+
+.readingTime {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-100);
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-top: 16px;
+  }
+}

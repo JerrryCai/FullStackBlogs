@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const renderedNavItems = (
     <>
-      <li className="cursor-pointer hover:text-accent-200">
+      <li className={styles.navItems}>
         <NavLink
           to="/blogs"
           className={({ isActive }) => (isActive ? 'text-accent-200' : '')}
@@ -27,8 +27,8 @@ export default function Navbar() {
           Blogs
         </NavLink>
       </li>
-      <li className="hover:text-accent-200">Create Post</li>
-      <li className="hover:text-accent-200">
+      <li className={styles.navItems}>Create Post</li>
+      <li className={styles.navItems}>
         <NavLink
           to="/about-us"
           className={({ isActive }) => (isActive ? 'text-accent-200' : '')}
@@ -36,7 +36,7 @@ export default function Navbar() {
           About Us
         </NavLink>
       </li>
-      <li className="flex items-center gap-2 hover:text-accent-200">
+      <li className={styles.navItems}>
         Categories <FaAngleDown />
       </li>
     </>
@@ -74,24 +74,13 @@ export default function Navbar() {
       </div>
       {/* Mobile Navbar */}
       {showMobileNav && (
-        <div className="flex flex-col items-center sm:hidden">
-          <ul
-            className="
-          flex flex-col items-center gap-4 font-bold text-text-main"
-          >
-            {renderedNavItems}
-          </ul>
-          <div className="mt-4 flex items-center gap-4 text-text-main">
-            <button
-              className="rounded border border-accent-200
-            px-4 py-2 font-bold text-text-main hover:bg-accent-100"
-            >
+        <div className={styles.mobileNavContainer}>
+          <ul className={styles.navList}>{renderedNavItems}</ul>
+          <div className={styles.mobileButtonContainer}>
+            <button className={`${styles.button} ${styles.buttonColored}`}>
               Sign Up
             </button>
-            <button
-              className="rounded bg-accent-200
-            px-4 py-2 font-bold text-white hover:bg-accent-100"
-            >
+            <button className={`${styles.button} ${styles.buttonUncolored}`}>
               Sign In
             </button>
           </div>

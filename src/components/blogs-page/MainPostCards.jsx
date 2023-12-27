@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MainPostCards.module.css';
 import imagePlaceholder from '../../assets/images/Image-Placeholder.png';
 import PostStatus from './PostStatus';
 import ReadMoreButton from './ReadMoreButton';
@@ -9,20 +10,14 @@ import ReadMoreButton from './ReadMoreButton';
 export default function MainPostCards() {
   return (
     <div>
-      <img
-        src={imagePlaceholder}
-        alt="blog image"
-        className="h-[18.75rem] w-full object-cover"
-      />
-      <div className="my-6">
-        <div className="mb-4">
+      <img src={imagePlaceholder} alt="blog image" className={styles.image} />
+      <div className={styles.container}>
+        <div className={styles.status}>
           <PostStatus category="CATEGORY" readingTime={7} />
         </div>
 
-        <h1 className="mb-2 text-2xl font-bold text-text-100">
-          Blog title heading will go here
-        </h1>
-        <p className="text-base text-text-200">
+        <h1 className={styles.title}>Blog title heading will go here</h1>
+        <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros.
         </p>

@@ -35,6 +35,19 @@
   color: var(--text-main);
 }
 
+.navItems {
+  cursor: pointer;
+}
+.navItems:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navItems:hover {
+  color: var(--accent-200);
+}
+
 .buttonContainer {
   display: flex;
   gap: 16px;
@@ -73,5 +86,21 @@
 
   .navList {
     flex-direction: column;
+  }
+  .mobileNavContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileButtonContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 16px;
+    color: var(--text-main);
+  }
+  .navList {
+    flex-direction: column;
+    gap: 16px;
   }
 }
