@@ -1,0 +1,18 @@
+.input {
+  height: 48px;
+  width: 480px;
+  border-width: 1px;
+  border-color: var(--primary-200);
+  padding: 12px;
+  color: var(--text-100);
+}
+
+.input::placeholder {
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .input {
+    width: 320px;
+  }
+}

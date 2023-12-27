@@ -1,6 +1,6 @@
 import React from 'react';
 import Author from '../components/about-us-page/Author';
-import styles from "./AboutUs.module.css"
+import styles from './AboutUs.module.css';
 /**
  * The about us page
  * @return {React.Component}

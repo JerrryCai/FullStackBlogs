@@ -1,9 +1,9 @@
 .container {
-    padding: 112px 64px;
+  padding: 112px 64px;
 }
 
 @media (max-width: 767px) {
-    .container {
-        padding: 56px 32px;
-    }
+  .container {
+    padding: 56px 32px;
+  }
 }

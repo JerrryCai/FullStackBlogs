@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Link } from 'react-router-dom';
 import styles from './Login.module.css';
 import logoImg from '/logo-no-background.png';
+import AuthFormInput from '../components/AuthFormInput';
+import { useFormInput } from '../hooks/useFormInput';
+import AuthFormButton from '../components/AuthFormButton';
 
 /**
  * The login component
  * @return {React.component}
  */
 export default function Login() {
-  const [loginUser, setLoginUser] = useState({ email: '', password: '' });
+  const [user, handleChange] = useFormInput({
+    email: '',
+    password: '',
+  });
+
   /**
-   * handles the email
+   * handle submit function
    * @param {*} event
    */
-  function handleEmailChange(event) {
-    setLoginUser((prevUser) => ({ ...prevUser, email: event.target.value }));
-  }
-
-  function handlePasswordChange(event) {
-    setLoginUser((prevUser) => ({ ...prevUser, password: event.target.value }));
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(loginUser);
+    console.log(user);
   }
 
   return (
@@ -38,40 +37,15 @@ export default function Login() {
         <p className={styles.description}>
           Lorem ipsum dolor sit amet adipiscing elit.
         </p>
-        <Form
-          onSubmit={handleSubmit}
-          className={styles.form}
-        >
-          <label htmlFor="email">
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              onChange={handleEmailChange}
-              className={styles.input}
-            />
-          </label>
-          <label htmlFor="password">
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              onChange={handlePasswordChange}
-              className={styles.input}
-              required
-            />
-          </label>
-          <button
-            type="submit"
-            className={styles.button}
-          >
-            Log In
-          </button>
+        <Form onSubmit={handleSubmit} className={styles.form}>
+          <AuthFormInput type="email" onChange={handleChange} />
+          <AuthFormInput type="password" onChange={handleChange} />
+          <AuthFormButton>log in</AuthFormButton>
         </Form>
         <div className={styles.cueWordContainer}>
-          <hr className={styles.cueLine}/>
+          <hr className={styles.cueLine} />
           <p>
-            Don't have an account?
+            Not have an account?
             <span className={styles.cueWord}>
               <Link to="/sign-up" className={styles.signUpLink}>
                 Sign Up
