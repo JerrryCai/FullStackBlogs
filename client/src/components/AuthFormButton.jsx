@@ -10,11 +10,9 @@ import PropTypes from 'prop-types';
  */
 export default function AuthFormButton({ children }) {
   return (
-    <>
-      <button type="submit" className={styles.button}>
-        {children}
-      </button>
-    </>
+    <button type="submit" className={styles.authButton}>
+      {children}
+    </button>
   );
 }
 

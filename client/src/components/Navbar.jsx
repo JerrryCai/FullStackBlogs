@@ -44,12 +44,16 @@ export default function Navbar() {
 
   const renderedButtons = (
     <>
-      <button className={`${styles.button} ${styles.buttonColored}`}>
-        Sign Up
-      </button>
-      <button className={`${styles.button} ${styles.buttonUncolored}`}>
-        Sign In
-      </button>
+      <Link to="/sign-up">
+        <button className={`${styles.button} ${styles.buttonColored}`}>
+          Sign Up
+        </button>
+      </Link>
+      <Link to="/login">
+        <button className={`${styles.button} ${styles.buttonUncolored}`}>
+          Log In
+        </button>
+      </Link>
     </>
   );
 

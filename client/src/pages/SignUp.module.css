@@ -85,6 +85,14 @@
   width: 50%;
 }
 
+.button {
+  height: 48px;
+  width: 480px;
+  padding: 12px;
+  background-color: var(--primary-200);
+  text-transform: capitalize;
+}
+
 @media (max-width: 767px) {
   .container {
     display: block;

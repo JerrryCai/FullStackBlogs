@@ -59,6 +59,14 @@
   text-underline-offset: 4px;
 }
 
+.button {
+  height: 48px;
+  width: 480px;
+  padding: 12px;
+  background-color: var(--primary-200);
+  text-transform: capitalize;
+}
+
 @media (max-width: 767px) {
   .logoContainer {
     margin-bottom: 4px;

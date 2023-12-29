@@ -4,7 +4,6 @@ import styles from './Login.module.css';
 import logoImg from '/logo-no-background.png';
 import AuthFormInput from '../components/AuthFormInput';
 import { useFormInput } from '../hooks/useFormInput';
-import AuthFormButton from '../components/AuthFormButton';
 
 /**
  * The login component
@@ -40,7 +39,7 @@ export default function Login() {
         <Form onSubmit={handleSubmit} className={styles.form}>
           <AuthFormInput type="email" onChange={handleChange} />
           <AuthFormInput type="password" onChange={handleChange} />
-          <AuthFormButton>log in</AuthFormButton>
+          <button className={styles.button}>Log In</button>
         </Form>
         <div className={styles.cueWordContainer}>
           <hr className={styles.cueLine} />

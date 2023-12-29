@@ -5,7 +5,6 @@ import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import logoImg from '/logo-no-background.png';
 import AuthFormInput from '../components/AuthFormInput';
 import { useFormInput } from '../hooks/useFormInput';
-import AuthFormButton from '../components/AuthFormButton';
 /**
  * The sign up component
  * @return {React.component}
@@ -55,7 +54,7 @@ export default function SignUp() {
               onChange={handleChange}
             />
             <AuthFormInput type="password" onChange={handleChange} />
-            <AuthFormButton>sign up</AuthFormButton>
+            <button className={styles.button}>Log In</button>
           </Form>
           <div className={styles.cueWordContainer}>
             <hr className={styles.cueLine} />
