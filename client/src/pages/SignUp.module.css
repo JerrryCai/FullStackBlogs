@@ -93,6 +93,11 @@
   text-transform: capitalize;
 }
 
+.errorMessage {
+  color: red;
+  margin-top: 8px;
+}
+
 @media (max-width: 767px) {
   .container {
     display: block;

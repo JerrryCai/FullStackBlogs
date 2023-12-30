@@ -73,6 +73,25 @@
   background-color: var(--accent-100);
 }
 
+.usernameContainer {
+  display: flex;
+  position: relative;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logout {
+  position: absolute;
+  z-index: 999;
+  margin-top: 56px;
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .navbar {
     padding: 16px;

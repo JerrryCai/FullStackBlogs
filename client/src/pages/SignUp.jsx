@@ -1,10 +1,11 @@
-import React from 'react';
-import { Form, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Form, Link, useNavigate } from 'react-router-dom';
 import styles from './SignUp.module.css';
 import imagePlaceholder from '../assets/images/Image-Placeholder.png';
 import logoImg from '/logo-no-background.png';
 import AuthFormInput from '../components/AuthFormInput';
 import { useFormInput } from '../hooks/useFormInput';
+import axios from 'axios';
 /**
  * The sign up component
  * @return {React.component}
@@ -17,13 +18,37 @@ export default function SignUp() {
     lastName: '',
   });
 
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const navigate = useNavigate();
+
   /**
    * Handle sign up submit
    * @param {*} event
    */
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(user);
+    try {
+      const response = await axios.post(
+        'http://localhost:4000/api/v1/register',
+        {
+          email: user.email,
+          password: user.password,
+          firstName: user.firstName,
+          lastName: user.lastName,
+        },
+      );
+      console.log(response);
+      navigate('/');
+    } catch (error) {
+      console.error('Registration error', error);
+      // 检查错误类型并设置适当的错误消息
+      if (error.response && error.response.status === 400) {
+        setErrorMessage(error.response.data);
+      } else {
+        setErrorMessage('An error occurred. Please try again.');
+      }
+    }
   }
 
   return (
@@ -54,8 +79,11 @@ export default function SignUp() {
               onChange={handleChange}
             />
             <AuthFormInput type="password" onChange={handleChange} />
-            <button className={styles.button}>Log In</button>
+            <button className={styles.button}>Sign Up</button>
           </Form>
+          {errorMessage && (
+            <p className={styles.errorMessage}>{errorMessage}</p>
+          )}
           <div className={styles.cueWordContainer}>
             <hr className={styles.cueLine} />
             <p>

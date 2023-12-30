@@ -40,6 +40,31 @@ Follow these steps to set up and run the project:
   npm run dev
 ```
 
+### For the server
+
+1. enter server folder
+
+```bash
+  cd server
+```
+
+2. enter the sub-folders
+
+Need to create a empty file called "users.json" in sign folder
+And type [] (empty array) in that file
+
+3. Install project dependencies:
+
+```bash
+  npm install
+```
+
+4. start server
+
+```bash
+  npm start
+```
+
 # Packages using in this project
 
 react

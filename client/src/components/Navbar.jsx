@@ -1,20 +1,54 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { jwtDecode } from 'jwt-decode';
 import styles from './Navbar.module.css';
 import { FaAngleDown } from 'react-icons/fa6';
 import { IoMdMenu } from 'react-icons/io';
 import { Link, NavLink } from 'react-router-dom';
 import logoImg from '/logo-no-background.png';
+import { FaRegUserCircle } from 'react-icons/fa';
 /**
  * Navbar Components that shows the navigation
  * @return { JSXElement }
  */
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  // user container
+  const [username, setUsername] = useState('');
+  const [showLogout, setShowLogout] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        console.log(decoded);
+        // 假设用户名存储在 JWT 的 'username' 字段中
+        setUsername(decoded.firstName);
+      } catch (error) {
+        // 处理无法解码的 token 或其他错误
+        console.error('Error decoding token:', error);
+      }
+    }
+  }, []);
   /**
    * Toggles the mobile navigation menu
    */
   function toggleMobileNav() {
     setShowMobileNav(!showMobileNav);
+  }
+  /**
+   * Toggles logout container
+   */
+  function toggleLogout() {
+    setShowLogout(!showLogout);
+  }
+  /**
+   * handle logout function
+   */
+  function handleLogout() {
+    localStorage.removeItem('token');
+    setUsername('');
+    setShowLogout(false);
   }
 
   const renderedNavItems = (
@@ -57,6 +91,18 @@ export default function Navbar() {
     </>
   );
 
+  const renderedUsernameButton = username && (
+    <button
+      className={`${styles.button}
+                  ${styles.buttonUncolored}
+                  ${styles.username}`}
+      onClick={toggleLogout}
+    >
+      <FaRegUserCircle size={25} />
+      <p>{username}</p>
+    </button>
+  );
+
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
@@ -76,14 +122,48 @@ export default function Navbar() {
         {/* 导航项 - 对于小屏幕是隐藏的，但可以通过点击汉堡菜单显示 */}
         <div className={styles.navListContainer}>
           <ul className={styles.navList}>{renderedNavItems}</ul>
-          <div className={styles.buttonContainer}>{renderedButtons}</div>
+          {/* sign up and login container */}
+          {username === '' ? (
+            <div className={styles.buttonContainer}>{renderedButtons}</div>
+          ) : (
+            <div className={styles.usernameContainer}>
+              {renderedUsernameButton}
+              {showLogout && (
+                <button
+                  className={`${styles.button}
+                          ${styles.buttonUncolored}
+                          ${styles.logout}`}
+                  onClick={handleLogout}
+                >
+                  Log out
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
       {/* Mobile Navbar */}
       {showMobileNav && (
         <div className={styles.mobileNavContainer}>
           <ul className={styles.navList}>{renderedNavItems}</ul>
-          <div className={styles.mobileButtonContainer}>{renderedButtons}</div>
+          {username === '' && (
+            <div className={styles.mobileButtonContainer}>
+              {renderedButtons}
+            </div>
+          )}
+          <div className={styles.usernameContainer}>
+            {renderedUsernameButton}
+            {showLogout && (
+              <button
+                className={`${styles.button}
+                          ${styles.buttonUncolored}
+                          ${styles.logout}`}
+                onClick={handleLogout}
+              >
+                Log out
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
