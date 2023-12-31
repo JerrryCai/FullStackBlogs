@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './BigPostCards.module.css';
 
 import imagePlaceholder from '../../assets/images/Image-Placeholder.png';
 import PostStatus from './PostStatus';
 import ReadMoreButton from './ReadMoreButton';
+import { BlogsContext } from '../../pages/Blogs';
 /**
  * The post cards with image category title and description
  * @return {React.Component}
  */
 export default function BigPostCards() {
+  const blogs = useContext(BlogsContext);
+  console.log(blogs);
   return (
     <div>
       <img
