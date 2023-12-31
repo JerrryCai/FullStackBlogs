@@ -1,5 +1,6 @@
 {
   "name": "fullstackblogs",
+  "proxy": "http://localhost:3000",
   "private": true,
   "version": "0.0.0",
   "type": "module",
