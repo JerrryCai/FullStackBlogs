@@ -7,14 +7,14 @@ import ReadMoreButton from './ReadMoreButton';
  * small post cards contain status title and read more
  * @return {React.Component}
  */
-export default function SmallPostCards() {
+export default function SmallPostCards(props) {
   return (
     <div>
       <div className={styles.container}>
         <img src={imagePlaceholder} alt="" className={styles.image} />
         <div>
           <PostStatus category="CATEGORY" readingTime={10} />
-          <h1 className={styles.title}>Blog title heading will go here</h1>
+          <h1 className={styles.title}>{props.post.title}</h1>
           <ReadMoreButton />
         </div>
       </div>

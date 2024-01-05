@@ -6,6 +6,7 @@ import styles from './BlogHeader.module.css';
  * @return {React.Component}
  */
 export default function BlogHeader() {
+
   return (
     <div className={styles.container}>
       <p className={styles.section}>Blog</p>
