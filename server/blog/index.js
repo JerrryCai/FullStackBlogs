@@ -32,6 +32,17 @@ app.get('/api/v1/blogs', (req, res) => {
   res.status(200).json(blogs);
 })
 
+// 获取单个博客
+app.get('/api/v1/blogs/:id', (req, res) => {
+  const blogs = readBlogsData();
+  const blog = blogs.find(b => b.id === req.params.id);
+  if (blog) {
+    res.status(200).json(blog);
+  } else {
+    res.status(404).send('Blog not found');
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

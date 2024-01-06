@@ -17,6 +17,9 @@
   color: var(--text-200);
   font-size: 16px;
   line-height: 24px;
+  white-space: nowrap; /* 防止文本换行 */
+  overflow: hidden; /* 隐藏溢出的内容 */
+  text-overflow: ellipsis; /* 使用省略号表示被隐藏的文本 */
 }
 
 @media (max-width: 767px) {
