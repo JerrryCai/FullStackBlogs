@@ -11,7 +11,7 @@ import { symbol } from 'prop-types';
  * Blog header of every posts
  * @return {React.Component}
  */
-export default function BlogHeader() {
+export default function BlogHeader(props) {
   return (
     <div className={styles.container}>
       <div className={styles.subContainer}>
@@ -21,11 +21,11 @@ export default function BlogHeader() {
             <div>
               <FaAngleRight />
             </div>
-            <p className={styles.category}>CATEGORY</p>
+            <p className={styles.category}>{props.blog.catergory}</p>
           </div>
           <div>
             <h1 className={styles.blogTitle}>
-              Blog title Header will go here
+              {props.blog.title}
             </h1>
             <p>
               By <span className={styles.fullName}>FULL NAME</span>

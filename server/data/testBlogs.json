@@ -1,28 +1,28 @@
 {
     "blogs": [
       {
-        "id": 1,
+        "id": "1",
         "title": "First Post",
         "content": "This is the first post",
         "category": "Technology",
         "description": "A brief overview of the first post's content"
       },
       {
-        "id": 2,
+        "id": "2",
         "title": "Second Post",
         "content": "This is the second post",
         "category": "Lifestyle",
         "description": "A summary of the second post"
       },
       {
-        "id": 3,
+        "id": "3",
         "title": "Third Post",
         "content": "This is the third post",
         "category": "Sports",
         "description": "A brief overview of the third post's content"
       },
       {
-        "id": 4,
+        "id": "4",
         "title": "Fourth Post",
         "content": "This is the fourth post",
         "category": "Travel",
