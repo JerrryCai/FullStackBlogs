@@ -61,7 +61,13 @@ export default function Navbar() {
           Blogs
         </NavLink>
       </li>
-      <li className={styles.navItems}>Create Post</li>
+      <NavLink
+        to="/create-blog"
+        className={({ isActive }) => (isActive ? 'text-accent-200' : '')}
+      >
+        <li className={styles.navItems}>Create Post</li>
+      </NavLink>
+
       <li className={styles.navItems}>
         <NavLink
           to="/about-us"

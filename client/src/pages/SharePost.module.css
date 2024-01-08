@@ -1,0 +1,44 @@
+.container {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-top: 16px;
+  background-color: var(--primary-300);
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  color: var(--primary-100);
+}
+
+.formInput {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.label {
+  width: 25%;
+  font-size: 20px;
+  text-align: end;
+  color: var(--primary-100);
+  font-weight: 600;
+}
+.inputContainer,
+.textareaContainer {
+  width: 75%;
+  font-size: 16px;
+  border: 1px solid var(--accent-100);
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+.textareaContainer {
+  height: 240px;
+}

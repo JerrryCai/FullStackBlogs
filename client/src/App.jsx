@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp.jsx';
 import Login from './pages/Login.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import Blog from './pages/Blog.jsx';
+import SharePost from './pages/SharePost.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/blogs', element: <Blogs /> },
+      { path: '/create-blog', element: <SharePost /> },
       { path: '/blogs/:id', element: <Blog /> },
       { path: '/about-us', element: <AboutUs /> },
     ],
