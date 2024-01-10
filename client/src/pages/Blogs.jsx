@@ -15,13 +15,15 @@ export default function Blogs() {
   async function fetchBlogs() {
     const response = await fetch("http://localhost:3000/api/v1/blogs")
     const data = await response.json()
-    setBlogs(data.blogs)
+    setBlogs(data)
     setIsLoading(false)
   }
   
   useEffect(() => {
     fetchBlogs()
   }, [])
+
+  console.log(blogs)
 
   if(isLoading) {
     return <h1>Page Loading</h1>

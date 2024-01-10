@@ -1,37 +1,37 @@
-const express = require('express')
-const fs = require('fs')
-const path = require('path');
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
+const Blog = require('../models/blog');
+
+// retrieve all blogs
 router.get("/", (req, res) => {
-  try {
-      const jsonFilePath = path.join(__dirname, '../data/testBlogs.json');
-      const jsonData = fs.readFileSync(jsonFilePath, 'utf-8')
-      const blogs = JSON.parse(jsonData)
-      res.status(200).json(blogs)
-
-    } catch (error) {
-      console.error('Error reading JSON file:', error)
-      res.status(500).send('Internal Server Error')
-    }
-});
-
-router.get("/:id", (req, res) => {
-  try {
-    const jsonFilePath = path.join(__dirname, '../data/testBlogs.json');
-    const jsonData = fs.readFileSync(jsonFilePath, 'utf-8')
-    const data = JSON.parse(jsonData)
-    const blog = data.blogs.find(b => b.id === req.params.id)
-    res.status(200).json(blog)
-
-  } catch (error) {
-    console.error('Error reading JSON file:', error)
-    res.status(500).send('Internal Server Error')
-  }
+  Blog.find()
+    .then((result) => res.send(result))
+    .catch(err => console.log(err))
 })
 
-router.post("/", (req, res) => {
 
+// add new blog to db test
+router.get("/add-blog", (req, res) => {
+  const blog = new Blog({
+    title: "Fourth Post",
+    content: "This is the fourth post",
+    category: "Travel",
+    description: "A brief overview of the fourth post's content",
+    author: "yang_ge_@outlook.com"
+  })
+  
+  blog.save()
+  .then((result) => res.send(result))
+  .catch(err => console.log(err))
+})
+
+// retrieve blog by id
+router.get("/:id", (req, res) => {
+  console.log(req.params.id);
+  Blog.findById(req.params.id)
+    .then((result) => res.send(result))
+    .catch(err => console.log(err))
 })
 
 module.exports = router

@@ -15,7 +15,7 @@ export default function SmallPostCards(props) {
         <div>
           <PostStatus category="CATEGORY" readingTime={10} />
           <h1 className={styles.title}>{props.post.title}</h1>
-          <ReadMoreButton id={props.post.id}/>
+          <ReadMoreButton id={props.post._id}/>
         </div>
       </div>
     </div>

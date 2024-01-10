@@ -27,7 +27,7 @@ export default function BigPostCards(props) {
           {props.post.description}
         </p>
       </div>
-      <ReadMoreButton id={props.post.id}/>
+      <ReadMoreButton id={props.post._id}/>
     </div>
   );
 }
