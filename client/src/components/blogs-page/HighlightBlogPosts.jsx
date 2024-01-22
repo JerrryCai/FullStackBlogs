@@ -9,7 +9,7 @@ import BlogsContext from '../../contexts/BlogsContext';
  */
 export default function HighlightBlogPosts() {
   const blogs = useContext(BlogsContext);
-  const smallPosts = blogs.slice(1, 4);
+  const smallPosts = blogs.blogs.slice(1, 4);
 
   return (
     <div className={styles.container}>
@@ -21,9 +21,9 @@ export default function HighlightBlogPosts() {
         <div className={`${styles.smallPostContainer} ${styles.postContainer}`}>
           {smallPosts.map((smallPost) => (
             <SmallPostCards
-              key={smallPost.id}
+              key={smallPost._id}
               content={smallPost}
-              id={smallPost.id}
+              id={smallPost._id}
             />
           ))}
         </div>

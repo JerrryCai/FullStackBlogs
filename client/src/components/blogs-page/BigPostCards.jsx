@@ -11,7 +11,9 @@ import BlogsContext from '../../contexts/BlogsContext';
  */
 export default function BigPostCards() {
   const blogs = useContext(BlogsContext);
-  const firstBlog = blogs[0];
+  // console.log(blogs.blogs);
+  const firstBlog = blogs.blogs[0];
+  console.log(firstBlog);
 
   return (
     <div>

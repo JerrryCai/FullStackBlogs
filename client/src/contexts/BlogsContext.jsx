@@ -12,7 +12,7 @@ export const BlogsProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4001/api/v1/blogs');
+        const response = await axios.get('http://localhost:4000/api/v1/blogs');
         setBlogs(response.data);
         setIsLoading(false); // 数据加载完毕
       } catch (error) {

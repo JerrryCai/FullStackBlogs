@@ -8,8 +8,16 @@ import {
   updateBlog,
   deleteBlog,
 } from '../controllers/blogController.js';
+import {
+  validateBlogInput,
+  validateIdParam,
+} from '../middleware/validationMiddleware.js';
 
-router.route('/').get(getAllBlogs).post(createBlog);
-router.route('/:id').get(getBlog).patch(updateBlog).delete(deleteBlog);
+router.route('/').get(getAllBlogs).post(validateBlogInput, createBlog);
+router
+  .route('/:id')
+  .get(validateIdParam, getBlog)
+  .patch(validateBlogInput, validateIdParam, updateBlog)
+  .delete(validateIdParam, deleteBlog);
 
 export default router;

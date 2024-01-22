@@ -1,12 +1,16 @@
+import 'express-async-errors';
 import * as dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
 
 import express from 'express';
 import morgan from 'morgan';
 const app = express();
+app.use(cors());
 
 import blogRouter from './routes/blogRouter.js';
 import mongoose from 'mongoose';
+import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -16,16 +20,7 @@ app.use(express.json());
 
 app.use('/api/v1/blogs', blogRouter);
 
-// Not found middleware
-app.use('*', (req, res) => {
-  res.status(404).json({ message: 'not found' });
-});
-
-// error middleware
-app.use((err, req, res, next) => {
-  console.log(err);
-  res.status(500).json({ message: 'something went wrong' });
-});
+app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 3000;
 
